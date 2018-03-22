@@ -4,13 +4,16 @@
     <h1>Hello World</h1>
     <p>I'm hosted with GitHub Pages.</p>
     <input type="button" value="Click" onClick="_test();" />
-    <script type="text/JavaScript">
-      function _test()
-      {
-        alert("Hello World");
-      }
-    </script>
+    <input type="hidden" id="testH" value="v8" />
+    <br>
     <br>
     <a href="./test.html">test</a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/JavaScript">
+      var _test = function() {
+        var elm = $.("#testH").val();
+        alert("Hello World" + elm);
+      }
+    </script>
   </body>
 </html>
