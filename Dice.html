@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Dice</h1>
+    <span style="padding:5px;">1:</span><input type="text" id="txt1" />
+    <br>
+    <span style="padding:5px;">2:</span><input type="text" id="txt2" />
+    <br>
+    <span style="padding:5px;">3:</span><input type="text" id="txt3" />
+    <br>
+    <span style="padding:5px;">4:</span><input type="text" id="txt4" />
+    <br>
+    <span style="padding:5px;">5:</span><input type="text" id="txt5" />
+    <br>
+    <span style="padding:5px;">6:</span><input type="text" id="txt6" />
+    <br>
+    <br>
+    <input type="button" value="Click" onClick="_Dice();" />
+    <br>
+    <br>
+    <span id="Result" style="padding:5px;"></span>
+    <script type="text/JavaScript">
+      var _Dice = function () {
+        var num = Math.floor( Math.random() * 6 + 1 );
+        var txt = document.getElementById("txt" + num).value;
+        document.getElementById("Result").innerHTML = num + ": " + txt;
+      }
+    </script>
+  </body>
+</html>
